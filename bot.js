@@ -55,7 +55,7 @@ if(message.member.roles.has(role.id) && message.content.startsWith("!limpar")){
   msgDel = 100;
   let numberMessages = parseInt(msgDel);
   message.channel.fetchMessages({limit: numberMessages}).then(messages => message.channel.bulkDelete(messages));
-  message.channel.send('Chat limpo!!');
+  message.channel.send('Chat limpo!');
 
 }
 
