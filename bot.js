@@ -20,7 +20,7 @@ bot.on('message', message => {
 
 
     if (message.content.toLocaleLowerCase().startsWith('!bot')){
-        message.channel.send('Olá, eu fui Desenvolvido pelo @Gustavoluii#9510 para ajudar a equipe NextNetwork no discord.');         
+        message.channel.send('Olá, eu fui Desenvolvido pelo @Gustavoluii para ajudar a equipe NextNetwork no discord.');         
  
         
     }
