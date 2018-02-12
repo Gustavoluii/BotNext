@@ -1,0 +1,14 @@
+{
+  "name": "botnext",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "Gustavoluii",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
+}
