@@ -52,7 +52,7 @@ bot.on('message', message => {
 
 let role = message.guild.roles.find("name", "BotPerm");
 if(message.member.roles.has(role.id) && message.content.startsWith("!limpar")){
-  msgDel = 100;
+  msgDel = 99;
   let numberMessages = parseInt(msgDel);
   message.channel.fetchMessages({limit: numberMessages}).then(messages => message.channel.bulkDelete(messages));
   message.channel.send('Chat limpo!');
