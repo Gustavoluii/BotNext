@@ -61,7 +61,7 @@ if(message.member.roles.has(role.id) && message.content.startsWith("!limpar")){
 
 let role2 = message.guild.roles.find("name", "BotPerm");
 if(message.member.roles.has(role.id) && (message.content.toLocaleLowerCase().startsWith('!aviso'))){
-    message.channel.send('@everyone Teste'); 
+    message.channel.send('@everyone Votação: Trocar Tags, VOTE!!! -> https://goo.gl/SDf2sS :slight_smile:'); 
 }
 });
 
