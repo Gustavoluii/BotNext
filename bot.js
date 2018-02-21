@@ -36,12 +36,12 @@ bot.on('message', message => {
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!forum')){
-        message.channel.send('Acesse nosso Site! - http://forum.next-mc.com/ :slight_smile: '); 
+        message.channel.send('Acesse nosso Fórum! - http://forum.next-mc.com/ :slight_smile: '); 
     
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!ip')){
-        message.channel.send('Acesse nosso Site! - `Jogar.mcnextup.com` :ok_hand: '); 
+        message.channel.send('Acesse nosso Servidor! - `Jogar.mcnextup.com` :ok_hand: '); 
     
     }
     
