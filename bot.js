@@ -20,7 +20,7 @@ bot.on('message', message => {
 
 
     if (message.content.toLocaleLowerCase().startsWith('!bot')){
-        message.channel.send('Olá, eu fui Desenvolvido pelo @Gustavoluii para ajudar a equipe NextNetwork no discord.');         
+        message.channel.send(' :shield: Olá, eu fui Desenvolvido pelo @Gustavoluii para ajudar a equipe NextNetwork no discord.');         
  
         
     }
@@ -45,8 +45,13 @@ bot.on('message', message => {
     
     }
     
+    if (message.content.toLocaleLowerCase().startsWith('!formulario')){
+        message.channel.send('Formulário para staff! - https://goo.gl/Az5S2X :bookmark_tabs: '); 
+    
+    }
+    
     if (message.content.toLocaleLowerCase().startsWith('!comandos')){
-        message.reply('Lista de Comandos!\n• !loja - `Loja do servidor` :wink: \n• !site - `Site do servidor` :thumbsup: \n• !forum - `Forum do servidor` :slight_smile: \n• !ip - `IP do servidor` :ok_hand:  '); 
+        message.reply('Lista de Comandos!\n• !loja - `Loja do servidor` :wink: \n• !site - `Site do servidor` :thumbsup: \n• !forum - `Fórum do servidor` :slight_smile: \n• !ip - `IP do servidor` :ok_hand: \n• !formulario - `Formulário para staff` :bookmark_tabs:  '); 
 
     }
 
