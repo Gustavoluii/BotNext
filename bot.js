@@ -26,22 +26,22 @@ bot.on('message', message => {
     }
 
     if (message.content.toLocaleLowerCase().startsWith('!loja')){
-        message.channel.send('Acesse nossa loja! - https://loja.next-mc.com/ :wink: '); 
+        message.channel.send('Acesse nossa loja! - https://loja.next-mc.com/ :dollar: '); 
     
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!site')){
-        message.channel.send('Acesse nosso Site! - https://loja.next-mc.com/ :thumbsup: '); 
+        message.channel.send('Acesse nosso Site! - https://loja.next-mc.com/ :newspaper: '); 
     
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!forum')){
-        message.channel.send('Acesse nosso Fórum! - http://forum.next-mc.com/ :slight_smile: '); 
+        message.channel.send('Acesse nosso Fórum! - http://forum.next-mc.com/ :hammer_pick: '); 
     
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!ip')){
-        message.channel.send('Acesse nosso Servidor! - `Jogar.mcnextup.com` :ok_hand: '); 
+        message.channel.send('Acesse nosso Servidor! - `Jogar.mcnextup.com` :earth_americas: '); 
     
     }
     
@@ -51,7 +51,7 @@ bot.on('message', message => {
     }
     
     if (message.content.toLocaleLowerCase().startsWith('!comandos')){
-        message.reply('Lista de Comandos!\n• !loja - `Loja do servidor` :wink: \n• !site - `Site do servidor` :thumbsup: \n• !forum - `Fórum do servidor` :slight_smile: \n• !ip - `IP do servidor` :ok_hand: \n• !formulario - `Formulário para staff` :bookmark_tabs:  '); 
+        message.reply('Lista de Comandos!\n• !loja - `Loja do servidor` :dollar: \n• !site - `Site do servidor` :newspaper: \n• !forum - `Fórum do servidor` :hammer_pick: \n• !ip - `IP do servidor` :earth_americas: \n• !formulario - `Formulário para staff` :bookmark_tabs:  '); 
 
     }
 
