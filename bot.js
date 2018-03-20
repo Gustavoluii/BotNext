@@ -75,3 +75,7 @@ bot.on('guildMemberAdd', member => {
 
 })
 
+bot.on('ready', () => {
+    bot.user.setActivity('Use !comandos para mais informações. !Bot', {type: 'WATCHING'});
+}); 
+
