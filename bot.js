@@ -90,7 +90,7 @@ bot.on("message", function(message) {
             message.channel.sendEmbed(embedd);
             break;
         default:
-            message.reply("Esse comando não existe seu animal");
+            message.reply("Esse comando não existe querido amiguinho ;D");
     }
 
 });
