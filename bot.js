@@ -95,4 +95,6 @@ bot.on("message", function(message) {
 
 });
 
-bot.login(TOKEN);
+bot.on('ready', () => {
+    bot.user.setActivity('!comandos | Lista de comandos | !bot', {type: 'PLAYING'});
+}); 
