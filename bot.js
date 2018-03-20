@@ -76,6 +76,6 @@ bot.on('guildMemberAdd', member => {
 })
 
 bot.on('ready', () => {
-    bot.user.setActivity('!comandos | Lista de comandos. !Bot', {type: 'PLAYING'});
+    bot.user.setActivity('!comandos | Lista de comandos | !Bot', {type: 'PLAYING'});
 }); 
 
