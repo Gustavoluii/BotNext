@@ -1,81 +1,97 @@
-var fila = []
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const bot = new Discord.Client();
+const PREFIX = "!";
 
+var name;
+var usrAuth = 0;
 
 bot.login(process.env.BOT_TOKEN);
 
-bot.on('message', message => {
-    
-    var achar = fila.indexOf(message.author.id)
-    if (achar >= 0 ) return
-    else if (0 >= achar){
-    fila.push(message.author.id)
-    setTimeout(() =>{
-    var achar2 = fila.indexOf(message.author.id)
-    if (achar2 == null ) return
-    fila.splice(achar2,1)
-    },5000)
-}
+bot.on("ready", function() {
 
-
-    if (message.content.toLocaleLowerCase().startsWith('!bot')){
-        message.channel.send(' :shield: Olá, eu fui Desenvolvido pelo @Gustavoluii para ajudar a equipe NextNetwork no discord.');         
- 
-        
-    }
-
-    if (message.content.toLocaleLowerCase().startsWith('!loja')){
-        message.channel.send('Acesse nossa loja! - https://loja.next-mc.com/ :dollar: '); 
-    
-    }
-    
-    if (message.content.toLocaleLowerCase().startsWith('!site')){
-        message.channel.send('Acesse nosso Site! - https://loja.next-mc.com/ :newspaper: '); 
-    
-    }
-    
-    if (message.content.toLocaleLowerCase().startsWith('!forum')){
-        message.channel.send('Acesse nosso Fórum! - http://forum.next-mc.com/ :hammer_pick: '); 
-    
-    }
-    
-    if (message.content.toLocaleLowerCase().startsWith('!ip')){
-        message.channel.send('Acesse nosso Servidor! - `Jogar.mcnextup.com` :earth_americas: '); 
-    
-    }
-    
-    if (message.content.toLocaleLowerCase().startsWith('!formulario')){
-        message.channel.send('Formulário para staff! - https://goo.gl/Az5S2X :bookmark_tabs: '); 
-    
-    }
-    
-    if (message.content.toLocaleLowerCase().startsWith('!comandos')){
-        message.reply('Lista de Comandos!\n• !loja - `Loja do servidor` :dollar: \n• !site - `Site do servidor` :newspaper: \n• !forum - `Fórum do servidor` :hammer_pick: \n• !ip - `IP do servidor` :earth_americas: \n• !formulario - `Formulário para staff` :bookmark_tabs:  '); 
-
-    }
-
-let role = message.guild.roles.find("name", "BotPerm");
-if(message.member.roles.has(role.id) && message.content.startsWith("!limpar")){
-  msgDel = 100;
-  let numberMessages = parseInt(msgDel);
-  message.channel.fetchMessages({limit: numberMessages}).then(messages => message.channel.bulkDelete(messages));
-  message.channel.send('Chat limpo!');
-
-}
-
-let role2 = message.guild.roles.find("name", "BotPerm");
-if(message.member.roles.has(role.id) && (message.content.toLocaleLowerCase().startsWith('!aviso'))){
-    message.channel.send('Tag Alterada! obs: Tag em teste, risco de voltar pra antiga. :slight_smile:'); 
-}
+    console.log("Ready");
 });
 
-bot.on('guildMemberAdd', member => {
-    bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-vindo ${member} ao ${member.guild.name} \nAjude vontando no servidor! https://pt.namemc.com/server/jogar.mcnextup.com :wink: `);
+bot.on("message", function(message) {
 
-})
+    console.log(message.content);
 
-bot.on('ready', () => {
-    bot.user.setActivity('!comandos | Lista de comandos | !Bot', {type: 'PLAYING'});
-}); 
+    if ( message.author.equals(bot.user)) 
+        return;
 
+
+    if( !message.content.startsWith(PREFIX))
+        return;
+
+    var argv = message.content.substr(PREFIX.length).split(" ");
+    console.log("argv: "+argv+", argv[1]: "+argv[1]+"");
+
+
+    switch(argv[0].toLowerCase()) {
+        case "loja":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Loja do servidor", "https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`Clique aqui para acessar a loja! :dollar:`)
+            .setURL("https://loja.next-mc.com/")
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "bot":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Desenvolvedor", "https://i.imgur.com/P4HiStn.png")
+            .setTitle(`:shield: Olá, eu fui Desenvolvido pelo @Gustavoluii para ajudar a equipe NextNetwork no discord.`)
+            .setURL("https://twitter.com/GustavoLuii_")
+            .setColor("F90808")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "site":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Site do servidor", "https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`Clique aqui para acessar o site! :newspaper:`)
+            .setURL("http://next-mc.com")
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "forum":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Fórum do servidor", "https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`Clique aqui para acessar o Fórum! :hammer_pick:`)
+            .setURL("http://forum.next-mc.com/")
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "ip":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("IP do Servidor", "https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`Jogar.mcnextup.com :earth_americas:`)
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "formulario":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Formulário do servidor", "https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`Clique aqui para acessar o Formulário! :bookmark_tabs:`)
+            .setURL("https://goo.gl/Az5S2X")
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        case "comandos":
+            var embedd = new Discord.RichEmbed()
+            .setAuthor("Lista de comandos:", "https://i.imgur.com/4eC6Mkq.png")
+            .setThumbnail("https://i.imgur.com/4eC6Mkq.png")
+            .setTitle(`!loja`)
+            .setDescription('Loja do servidor :dollar:')
+            .addField("!site", "Site do servidor :newspaper:")
+            .addField("!forum", "Fórum do servidor :hammer_pick:")
+            .addField("!ip", "IP do servidor :earth_americas:")
+            .addField("!formulario", "Formulário para staff :bookmark_tabs:")
+            .setColor("14DDDA")
+            message.channel.sendEmbed(embedd);
+            break;
+        default:
+            message.reply("Esse comando não existe seu animal");
+    }
+
+});
+
+bot.login(TOKEN);
