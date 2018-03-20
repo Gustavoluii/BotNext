@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const PREFIX = "!";
 
+bot.login(process.env.BOT_TOKEN);
+
 var name;
 var usrAuth = 0;
-
-bot.login(process.env.BOT_TOKEN);
 
 bot.on("ready", function() {
 
