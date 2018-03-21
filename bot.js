@@ -11,6 +11,11 @@ var usrAuth = 0;
 
 bot.on("ready", function() {
    
+    console.log("Ready");
+});
+
+bot.on("message", function(message) {
+    
     var achar = fila.indexOf(message.author.id)
     if (achar >= 0 ) return
     else if (0 >= achar){
@@ -21,11 +26,6 @@ bot.on("ready", function() {
     fila.splice(achar2,1)
     },3000)
 }
-
-    console.log("Ready");
-});
-
-bot.on("message", function(message) {
 
     console.log(message.content);
 
