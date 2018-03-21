@@ -1,3 +1,4 @@
+var fila = []
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const TOKEN = "BOT_TOKEN"
@@ -9,6 +10,17 @@ var name;
 var usrAuth = 0;
 
 bot.on("ready", function() {
+   
+    var achar = fila.indexOf(message.author.id)
+    if (achar >= 0 ) return
+    else if (0 >= achar){
+    fila.push(message.author.id)
+    setTimeout(() =>{
+    var achar2 = fila.indexOf(message.author.id)
+    if (achar2 == null ) return
+    fila.splice(achar2,1)
+    },3000)
+}
 
     console.log("Ready");
 });
