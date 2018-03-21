@@ -89,8 +89,6 @@ bot.on("message", function(message) {
             .setColor("14DDDA")
             message.channel.sendEmbed(embedd);
             break;
-        default:
-            message.reply("Esse comando não existe querido amiguinho ;D");
     }
 
 });
