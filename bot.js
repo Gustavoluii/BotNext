@@ -108,3 +108,7 @@ bot.on("message", function(message) {
 bot.on('ready', () => {
     bot.user.setActivity('!comandos | Lista de comandos | !bot', {type: 'PLAYING'});
 }); 
+
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('452291568947429376').send("Bem-Vindo " + member.user + " ao :zap:NextNetwork");
+});
