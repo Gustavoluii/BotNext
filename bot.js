@@ -143,7 +143,7 @@ bot.on('ready', () => {
 
 
 bot.on('guildMemberAdd', member => {
-    bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-Vindo ${member} ao ${member.guild.name}, Para mais Informações use !comandos em nosso servidor`);
+    bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-Vindo ${member} ao ${member.guild.name}, Para mais Informações use **!comandos** em nosso servidor`);
 
 })
 
