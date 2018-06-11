@@ -65,7 +65,7 @@ switch(argv[0].toLowerCase()) {
         message.channel.sendEmbed(embeddd).then((value) => {
           setTimeout(() => {
               value.delete();
-          }, 100000);
+          }, 60000);
       });
        break;
 
