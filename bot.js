@@ -60,12 +60,12 @@ switch(argv[0].toLowerCase()) {
 
         var embeddd = new Discord.RichEmbed()
         .addField("Okay!", "Foi enviado uma lista com todos os Comandos do servidor em seu privado :zap:")
-        .setFooter("Essa mensagem se autodestruirá em 10 segundos.")
+        .setFooter("Essa mensagem se autodestruirá em 1 Minuto.")
         .setColor("04B404")
         message.channel.sendEmbed(embeddd).then((value) => {
           setTimeout(() => {
               value.delete();
-          }, 10000);
+          }, 100000);
       });
        break;
 
