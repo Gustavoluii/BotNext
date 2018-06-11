@@ -152,8 +152,9 @@ bot.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-        .setColor('8904B1')
-        .addField('Bem-Vindo!', `Bem-Vindo ${member} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Membros em nosso servidor`)
+        .setColor("8904B1")
+        .addField('Bem-Vindo!', `Bem-Vindo ${member} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
+
         channel.sendEmbed(embed);
 });
 
