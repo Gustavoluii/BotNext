@@ -153,7 +153,7 @@ bot.on('guildMemberAdd', member => {
         if (!channel) return;
         let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .addField('Bem-Vindo!', `Bem-Vindo ${member} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
+        .addField('Bem-Vindo!', `Bem-Vindo ${member} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Membros em nosso servidor`)
         channel.sendEmbed(embed);
 });
 
