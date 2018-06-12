@@ -60,12 +60,12 @@ switch(argv[0].toLowerCase()) {
 
         var embeddd = new Discord.RichEmbed()
         .addField("Okay!", "Foi enviado uma lista com todos os Comandos do servidor em seu privado :zap:")
-        .setFooter("Essa mensagem se autodestruirá em 1 Minuto.")
+        .setFooter("Essa mensagem se autodestruirá em 10 segundos.")
         .setColor("04B404")
         message.channel.sendEmbed(embeddd).then((value) => {
           setTimeout(() => {
               value.delete();
-          }, 60000);
+          }, 10000);
       });
        break;
 
@@ -143,7 +143,7 @@ bot.on('ready', () => {
 
 
 bot.on('guildMemberAdd', member => {
-    bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-Vindo ${member} ao ${member.guild.name}, Para mais Informações use **!comandos** em nosso servidor`);
+    bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-Vindo ${member} ao ${member.guild.name}, Para mais Informações use !comandos em nosso servidor`);
 
 })
 
@@ -152,9 +152,8 @@ bot.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
-        .setColor("8904B1")
+        .setColor('RANDOM')
         .addField('Bem-Vindo!', `Bem-Vindo ${member.user} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
-
         channel.sendEmbed(embed);
 });
 
