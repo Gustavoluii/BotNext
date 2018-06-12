@@ -138,7 +138,7 @@ switch(argv[0].toLowerCase()) {
 
 
 bot.on('ready', () => {
-      bot.user.setGame(`!comandos | ${bot.users.size} Membros | Luii ©`, `https://www.twitch.tv/zdnplays`);
+      bot.user.setGame(`!comandos | 0 Membros | Luii ©`, `https://www.twitch.tv/zdnplays`);
 });
 
 
