@@ -147,14 +147,18 @@ bot.on('guildMemberAdd', member => {
 
 })
 
+//bot.on('guildMemberAdd', member => {
+//    let channel = member.guild.channels.find('name', '🔮novos-membros');
+//    let memberavatar = member.user.avatarURL
+//        if (!channel) return;
+//        let embed = new Discord.RichEmbed()
+//        .setColor('RANDOM')
+//        .addField('Bem-Vindo!', `Bem-Vindo ${member.user} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
+//        channel.sendEmbed(embed);
+//});
+
 bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '🔮novos-membros');
-    let memberavatar = member.user.avatarURL
-        if (!channel) return;
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField('Bem-Vindo!', `Bem-Vindo ${member.user} ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
-        channel.sendEmbed(embed);
+    member.guild.channels.get('452291568947429376').send("Bem-Vindo " + member.user + " ao :zap:NextNetwork");
 });
 
 bot.on('guildMemberAdd', member => {
