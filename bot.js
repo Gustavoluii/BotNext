@@ -158,7 +158,7 @@ bot.on('guildMemberAdd', member => {
 //});
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('452291568947429376').send("Bem-Vindo " + member.user + " ao :zap:NextNetwork");
+    member.guild.channels.get('452291568947429376').send("Bem-Vindo " + member.user + " ao :zap:NextNetwork! agora nós temos **" + member.guild.membercount + "** Membros em nosso servidor");
 });
 
 bot.on('guildMemberAdd', member => {
