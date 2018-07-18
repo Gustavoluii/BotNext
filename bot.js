@@ -45,7 +45,7 @@ console.log("argv: "+argv+", argv[1]: "+argv[1]+"");
 switch(argv[0].toLowerCase()) {
     case "comandos":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Lista de Comandos:", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Lista de Comandos:", "https://i.imgur.com/vxFJyJx.png")
         .addField("!loja", "Loja do servidor :dollar:")
         .addField("!site", "Site do servidor :newspaper:")
         .addField("!forum", "Fórum do servidor :hammer_pick:")
@@ -71,7 +71,7 @@ switch(argv[0].toLowerCase()) {
 
     case "loja":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Loja do servidor", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Loja do servidor", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Clique aqui para acessar a loja! :dollar:`)
         .setURL("https://loja.next-mc.com/")
         .setColor("14DDDA")
@@ -80,7 +80,7 @@ switch(argv[0].toLowerCase()) {
 
     case "site":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Site do servidor", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Site do servidor", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Clique aqui para acessar o site! :newspaper:`)
         .setURL("http://next-mc.com")
         .setColor("14DDDA")
@@ -89,7 +89,7 @@ switch(argv[0].toLowerCase()) {
 
     case "forum":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Fórum do servidor", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Fórum do servidor", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Clique aqui para acessar o Fórum! :hammer_pick:`)
         .setURL("http://forum.next-mc.com/")
         .setColor("14DDDA")
@@ -98,7 +98,7 @@ switch(argv[0].toLowerCase()) {
 
     case "ip":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("IP do Servidor", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("IP do Servidor", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Jogar.mcnextup.com :earth_americas:`)
         .setColor("14DDDA")
         message.channel.sendEmbed(embedd);
@@ -106,7 +106,7 @@ switch(argv[0].toLowerCase()) {
 
     case "formulario":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Formulário do servidor", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Formulário do servidor", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Clique aqui para acessar o Formulário! :bookmark_tabs:`)
         .setURL("https://goo.gl/Az5S2X")
         .setColor("14DDDA")
@@ -115,7 +115,7 @@ switch(argv[0].toLowerCase()) {
 
     case "convite":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Convite do nosso Discord", "https://i.imgur.com/Pjc0LJk.png")
+        .setAuthor("Convite do nosso Discord", "https://i.imgur.com/vxFJyJx.png")
         .setTitle(`Clique aqui para abrir o link do convite`)
         .setURL("https://discordapp.com/invite/redenextnetwork")
         .setColor("2E9AFE")
@@ -124,7 +124,7 @@ switch(argv[0].toLowerCase()) {
 
     case "serverinfo":
         var embedd = new Discord.RichEmbed()
-        .setAuthor("Informações do Servidor:", "https://i.imgur.com/4eC6Mkq.png")
+        .setAuthor("Informações do Servidor:", "https://i.imgur.com/vxFJyJx.png")
         .setColor("14DDDA")
         .setThumbnail(message.guild.iconURL)
         .addField("Nome:", message.guild.name)
