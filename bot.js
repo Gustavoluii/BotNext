@@ -138,9 +138,9 @@ switch(argv[0].toLowerCase()) {
 
 
 bot.on('ready', () => {
-      bot.user.setGame(`!comandos | ${bot.users.size} Membros | Luii ©`, `https://www.twitch.tv/zdnplays`);
+      bot.user.setGame(`!comandos | 1566 Membros | Luii ©`, `https://www.twitch.tv/zdnplays`);
 });
-
+//${bot.users.size}
 
 bot.on('guildMemberAdd', member => {
     bot.guilds.get(member.guild.id).members.get(member.id).sendMessage(`Bem-Vindo ${member} ao ${member.guild.name}, Para mais Informações use !comandos em nosso servidor`);
