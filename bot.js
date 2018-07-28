@@ -1,6 +1,8 @@
 var fila = []
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const bot = new Discord.Client({
+    fetchAllMembers: true
+});
 const PREFIX = "!";
 
 var name;
