@@ -101,7 +101,7 @@ switch(argv[0].toLowerCase()) {
     case "ip":
         var embedd = new Discord.RichEmbed()
         .setAuthor("IP do Servidor", "https://i.imgur.com/vxFJyJx.png")
-        .setTitle(`Jogar.mcnextup.com :earth_americas:`)
+        .setTitle(`Jogar.next-mc.com :earth_americas:`)
         .setColor("14DDDA")
         message.channel.sendEmbed(embedd);
           break;
