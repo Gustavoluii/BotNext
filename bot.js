@@ -182,7 +182,7 @@ bot.on("message", async message => {
         .addField("`🌎` IP:", "jogar.next-mc.com", true)
         .addField("`👾` Nosso Discord:", "[__Link Direto__](https://discord.gg/redenextnetwork)", true)
         .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://goo.gl/Az5S2X) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
-        .addField("`📦` Comandos:", "`links`, `ip`, `discord`, `vip`", true)
+        .addField("`📦` Comandos:", "`links`, `ip`, `forum`, `formulario`, `vip`, `site`", true)
         .setTimestamp()
         .setFooter(`${message.author.tag} | ©‎ GustavoLuii`, message.author.avatarURL)
         .setColor(COR)
