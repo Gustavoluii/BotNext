@@ -84,7 +84,7 @@ bot.on("message", async message => {
     let prefix = PREFIX;
     
     //Canal de sugestão//
-    if(message.channel.id == "497065441890664469"){
+    if(message.channel.id == "497060772539662366"){
         message.react('👍')
         message.react('👎')
     };
