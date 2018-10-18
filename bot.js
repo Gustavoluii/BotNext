@@ -1,3 +1,4 @@
+console.log("Conectando...")
 const Discord = require("discord.js");
 const fs = require("fs");
 const moment = require("moment")
@@ -27,13 +28,15 @@ bot.on('guildMemberAdd', member => {
 })
 
 bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '🔮novos-membros');
+    let channel = member.guild.channels.find(c => c.name == '🌑novos-membros');
     let memberavatar = member.user.displayAvatarURL
         if (!channel) return;
-        let embed = new Discord.RichEmbed()
+        let t = new Discord.RichEmbed()
+        .setAuthor("Bem-Vindo!", "https://i.imgur.com/KVTR9WD.png")
+        .setThumbnail(member.user.displayAvatarURL)
+        .setDescription(`Bem-Vindo **${member.user.username}** ao ${member.guild.name}!\n agora nós temos **${member.guild.memberCount}** membros em nosso servidor`)
         .setColor(COR)
-        .addField('Bem-Vindo!', `Bem-Vindo **${member.user.username}** ao ${member.guild.name}! agora nós temos **${member.guild.memberCount}** Players em nosso servidor`)
-        channel.sendEmbed(embed);
+        channel.send(t);
 });
 
 //Membros no tópico//
@@ -82,12 +85,31 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     let prefix = PREFIX;
+
+    if (message.content.includes("discord.gg/")) {
+        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            message.delete();
+            message.reply("`❌ Divulgação - [Servidores]`");
+        }
+
+    }
     
+    if (message.content.includes("https://discord.gg/")) {
+        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            message.delete();
+            message.reply("`❌ Divulgação - [Servidores]`");
+        }
+
+    }
+
     //Canal de sugestão//
     if(message.channel.id == "497060772539662366"){
         message.react('👍')
         message.react('👎')
     };
+
 
     //responder mention//
     if (message.content === `<@${bot.user.id}>`) {
@@ -96,15 +118,77 @@ bot.on("message", async message => {
         .setColor(COR)
         message.channel.send(embeduser);
     }
-
+    //////////////////////////////////////
     if(message.content.startsWith(prefix)){
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
+    //////////////////////////////////////
+
+        //anunciar command//
+        if(cmd === `${prefix}anunciar`){
+            if (message.member.hasPermission("ADMINISTRATOR")) {
+                const text = args.slice(0.5).join(" ");
+                 if (text.length < 0.5) return message.channel.send("Você precisa por alguma mensagem!").then((value) => {
+                   setTimeout(() => {
+                        value.delete();
+                    }, 3000);
+                });
+                const embed = new Discord.RichEmbed()
+                .setColor(COR)
+                .setAuthor(`Anúncio - ${message.guild.name}`, "https://i.imgur.com/qX4nK3l.gif")
+                .setFooter(`Anúncio realizado por: ${message.author.username}`,message.member.user.displayAvatarURL)
+                .setTimestamp(new Date())
+                .setDescription(text);
+                message.channel.send("@everyone")
+                message.delete().catch();
+                message.channel.send({embed}).then(msg=> {
+                msg.react('📢');
+                
+          });
+         }
+        }
+
+    if(cmd === `${prefix}skin`){
+        let reason = args.slice(0).join(' ');
+        if (reason.length < 1) return message.reply('Use: !skin (nick)');
+
+        let skinembed = new Discord.RichEmbed()
+        .setTitle("<:steve:502532637106110479> "+ args[0])
+        .setImage(`https://mc-heads.net/body/${args[0]}`)
+        .setFooter(message.author.tag, message.author.displayAvatarURL)
+        .setColor(COR)
+        message.channel.send(skinembed);
+
+    }
 
     
+    if(cmd === `${prefix}skinhead`){
+        let reason = args.slice(0).join(' ');
+        if (reason.length < 1) return message.reply('Use: !skinhead <nick>');
 
+        let skinembed = new Discord.RichEmbed()
+        .setTitle("<:steve:502532637106110479> "+ args[0])
+        .setImage(`https://mc-heads.net/head/${args[0]}`)
+        .setFooter(message.author.tag, message.author.displayAvatarURL)
+        .setColor(COR)
+        message.channel.send(skinembed);
+
+    }
     
+    if(cmd === `${prefix}skinavatar`){
+        let reason = args.slice(0).join(' ');
+        if (reason.length < 1) return message.reply('Use: !skinavatar <nick>');
+
+        let skinembed = new Discord.RichEmbed()
+        .setTitle("<:steve:502532637106110479> "+ args[0])
+        .setImage(`https://mc-heads.net/avatar/${args[0]}`)
+        .setFooter(message.author.tag, message.author.displayAvatarURL)
+        .setColor(COR)
+        message.channel.send(skinembed);
+
+    }
+
     //chat on command//
     if(cmd === `${prefix}chaton`){
         if (message.member.hasPermission("MANAGE_ROLES")) {
@@ -182,7 +266,7 @@ bot.on("message", async message => {
         .addField("`🌎` IP:", "jogar.next-mc.com", true)
         .addField("`👾` Nosso Discord:", "[__Link Direto__](https://discord.gg/redenextnetwork)", true)
         .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://goo.gl/Az5S2X) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
-        .addField("`📦` Comandos:", "`links`, `ip`, `forum`, `formulario`, `vip`, `site`", true)
+        .addField("`📦` Comandos:", "`links`, `ip`, `discord`, `vip`, `skin`, `skinhead`, `skinavatar`", true)
         .setTimestamp()
         .setFooter(`${message.author.tag} | ©‎ GustavoLuii`, message.author.avatarURL)
         .setColor(COR)
@@ -216,3 +300,4 @@ bot.on("message", async message => {
 
 }
 });
+
