@@ -101,7 +101,7 @@ bot.on("message", async message => {
 //            message.delete();
 //            message.reply("`❌ Divulgação - [Servidores]`");
 //        }
-
+//
 //    }
 
     //Canal de sugestão//
