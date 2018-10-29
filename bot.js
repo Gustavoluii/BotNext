@@ -86,23 +86,23 @@ bot.on("message", async message => {
     if(message.channel.type === "dm") return;
     let prefix = PREFIX;
 
-    if (message.content.includes("discord.gg/")) {
-        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            message.delete();
-            message.reply("`❌ Divulgação - [Servidores]`");
-        }
+//    if (message.content.includes("discord.gg/")) {
+//        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
+ // //      if (!message.member.hasPermission("ADMINISTRATOR")) {
+  //          message.delete();
+  //          message.reply("`❌ Divulgação - [Servidores]`");
+ //       }
 
-    }
+//    }
     
-    if (message.content.includes("https://discord.gg/")) {
-        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            message.delete();
-            message.reply("`❌ Divulgação - [Servidores]`");
-        }
+//    if (message.content.includes("https://discord.gg/")) {
+//        bot.channels.get("464555146504962048").send("<:alerta:502524278936305694> | "+ message.author+ " Enviou uma mensagem suspeita no canal " + message.channel);
+ //       if (!message.member.hasPermission("ADMINISTRATOR")) {
+//            message.delete();
+//            message.reply("`❌ Divulgação - [Servidores]`");
+//        }
 
-    }
+//    }
 
     //Canal de sugestão//
     if(message.channel.id == "497060772539662366"){
