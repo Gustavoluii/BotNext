@@ -276,7 +276,7 @@ bot.on("message", async message => {
     }
     if(cmd === `${prefix}links` || cmd === `${prefix}forum` || cmd === `${prefix}formulario`){
         let linkembed = new Discord.RichEmbed()
-        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://goo.gl/Az5S2X) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
+        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://nextgo.me/3Y) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
         .setColor(COR)
         message.channel.send(linkembed);
     }
@@ -287,7 +287,7 @@ bot.on("message", async message => {
         .addField("`💵` Compre VIP em:", "[__Clique aqui__](http://loja.next-mc.com)", true)
         .addField("`🌎` IP:", "jogar.next-mc.com", true)
         .addField("`👾` Nosso Discord:", "[__Link Direto__](https://discord.gg/redenextnetwork)", true)
-        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://goo.gl/Az5S2X) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
+        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Fórum__](http://forum.next-mc.com) **|** [__Formulário__](https://nextgo.me/3Y) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
         .addField("`📦` Comandos:", "`links`, `ip`, `discord`, `vip`, `skin`, `skinhead`, `skinavatar`", true)
         .setTimestamp()
         .setFooter(`${message.author.tag} | ©‎ GustavoLuii`, message.author.avatarURL)
