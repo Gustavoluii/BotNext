@@ -148,6 +148,38 @@ bot.on("message", async message => {
           });
          }
         }
+        
+                if(cmd === `${prefix}denúncia` || cmd === `${prefix}denuncia`){
+            if(!args[0]) return message.reply("Use: "+prefix+"denuncia (mensagem)").then(msg => msg.delete(10000));
+            let embedd = new Discord.RichEmbed()
+            .setAuthor("Denúncia:")
+            .setDescription("```"+ args.join(" ") +"```")
+            .setFooter(message.author.username)
+            .setTimestamp()
+            .setColor(COR)
+
+            bot.channels.get("526096281689522192").send(embedd); //"📋 | **" + message.author.username + "** Enviou uma denúcia:\n```"+ args.join(" ") +"```"
+                    
+            console.log(`${message.author.username} Enviou uma sugestão`)
+            message.channel.send(`📋 | ${message.author} Obrigado por sua colaboração, sua denúncia foi recebida pela nossa equipe de moderadores para análise.`).then(msg => msg.delete(20000));
+            message.delete();
+        }
+
+        if(cmd === `${prefix}revisão` || cmd === `${prefix}revisao`){
+            if(!args[0]) return message.reply("Use: "+prefix+"revisão (mensagem)").then(msg => msg.delete(10000));
+            let embedd = new Discord.RichEmbed()
+            .setAuthor("Revisão:")
+            .setDescription("```"+ args.join(" ") +"```")
+            .setFooter(message.author.username)
+            .setTimestamp()
+            .setColor(COR)
+
+            bot.channels.get("526100374478913536").send(embedd); //"📋 | **" + message.author.username + "** Enviou uma denúcia:\n```"+ args.join(" ") +"```"
+                    
+            console.log(`${message.author.username} Enviou uma sugestão`)
+            message.channel.send(`📋 | ${message.author} Sua revisão foi enviada para análise pela equipe de administração, em breve lhe daremos um retorno.`).then(msg => msg.delete(20000));
+            message.delete();
+        }
 
     if(cmd === `${prefix}skin`){
         let reason = args.slice(0).join(' ');
