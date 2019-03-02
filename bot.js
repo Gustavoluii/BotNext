@@ -17,8 +17,8 @@ bot.on("ready", async () => {
     setInterval(function() {
     let statusale = [`!ajuda | ${bot.users.size} Membros | Luii ©`, `!ajuda | loja.next-mc.com | Luii ©`];
     let status = statusale[Math.floor(Math.random()*statusale.length)];
-    bot.user.setPresence({ status: 'STREAMING', game: { name: status, url: "https://www.twitch.tv/gustavoluii"}});
-    bot.user.setPresence({ status: 'STREAMING', game: { name: status, url: "https://www.twitch.tv/gustavoluii"}});
+    bot.user.setPresence({ status: 'STREAMING', game: { name: status, url: "https://www.twitch.tv/zdnplays"}});
+    bot.user.setPresence({ status: 'STREAMING', game: { name: status, url: "https://www.twitch.tv/zdnplays"}});
     }, 5000)
 });
 
