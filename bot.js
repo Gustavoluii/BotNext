@@ -313,7 +313,7 @@ bot.on("message", async message => {
         message.channel.send(linkembed);
     }
 
-    if(cmd === `${prefix}ajuda` || cmd === `${prefix}comandos`) {
+    if(cmd === `${prefix}help` || cmd === `${prefix}comandos`) {
         let ajudaembed = new Discord.RichEmbed()
         .setAuthor("NextNetwork - Ajuda", bot.user.displayAvatarURL)
         .addField("`💵` Compre VIP em:", "[__Clique aqui__](http://loja.next-mc.com)", true)
