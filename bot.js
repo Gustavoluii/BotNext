@@ -316,10 +316,10 @@ bot.on("message", async message => {
     if(cmd === `${prefix}dasadsdaadsasd` || cmd === `${prefix}comandos`) {
         let ajudaembed = new Discord.RichEmbed()
         .setAuthor("NextNetwork - Ajuda", bot.user.displayAvatarURL)
-        .addField("`💵` Compre VIP em:", "[__Clique aqui__](http://loja.next-mc.com)", true)
+        .addField("`💵` Compre VIP em:", "[__Clique aqui__](https://loja.next-mc.com/loja)", true)
         .addField("`🌎` IP:", "jogar.next-mc.com", true)
         .addField("`👾` Nosso Discord:", "[__Link Direto__](https://discord.gg/redenextnetwork)", true)
-        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Área do Jogador__](http://usuario.next-mc.com) **|** [__Formulário__](https://goo.gl/zWeJSB) **|** [__Guia do Jogador__](https://goo.gl/fFfiaM) **|** [__Regras da Rede__](https://goo.gl/CTQXMT) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
+        .addField("`🌏` Links:", "[__Loja__](http://loja.next-mc.com) **|** [__Área do Jogador__](http://usuario.next-mc.com) **|** [__Formulário__](https://usuario.next-mc.com ) **|** [__Guia do Jogador__](https://next-mc.com/e/k) **|** [__Regras da Rede__](https://next-mc.com/e/i) **|** [__Twitter__](https://twitter.com/RedeNextNetwork) **|** [__YouTube__](https://www.youtube.com/channel/UCmFSSXpPtJHyD4srKBgFLTQ)")
         .addField("`📦` Comandos:", "`links`, `ip`, `discord`, `vip`, `skin`, `skinhead`, `skinavatar`", true)
         .setTimestamp()
         .setFooter(`${message.author.tag} | ©‎ GustavoLuii`, message.author.avatarURL)
